@@ -49,7 +49,7 @@ public class GetAllDeviceListViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        // set up the conver view if it's null
+        // set up the convert view if it's null
         ListCell cell;
         if(convertView == null){
             convertView = inflater.inflate(R.layout.get_all_devices_list_view_cell,null);
@@ -59,7 +59,7 @@ public class GetAllDeviceListViewAdapter extends BaseAdapter {
             cell.deviceId = (TextView) convertView.findViewById(R.id.device_id);
             cell.address = (TextView) convertView.findViewById(R.id.device_address);
             cell.type = (TextView) convertView.findViewById(R.id.type);
-
+            // remember to set the image to type in future nAND DONT FORGET THE get_all_devices_list_view!
             convertView.setTag(cell);
         }
         else{
@@ -74,7 +74,7 @@ public class GetAllDeviceListViewAdapter extends BaseAdapter {
              cell.deviceId.setText(" " + jsonObject.getString("deviceID"));
              cell.address.setText(" "+ jsonObject.getString("address"));
              cell.type.setText(" " + jsonObject.getString("type"));
-
+            // remember to set the image to type in future
         }
         catch(JSONException e){
             e.printStackTrace();
@@ -89,7 +89,7 @@ public class GetAllDeviceListViewAdapter extends BaseAdapter {
         private TextView deviceId;
         private TextView address;
         private TextView type;
-
+        // remember to set the image to type in future
 
     }
 }
